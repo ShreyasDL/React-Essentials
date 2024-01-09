@@ -4,6 +4,9 @@ import CoreConcept from "./components/CoreConcept";
 import TabButton from "./components/TabButton";
 
 function App() {
+  function onSelect() {
+    console.log("Event clicked");
+  }
   return (
     <div>
       <Header />
@@ -20,10 +23,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={onSelect}>Components</TabButton>
+            <TabButton onSelect={onSelect}>Props</TabButton>
+            <TabButton onSelect={onSelect}>JSX</TabButton>
+            <TabButton onSelect={onSelect}>State</TabButton>
           </menu>
         </section>
       </main>
